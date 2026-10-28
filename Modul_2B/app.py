@@ -1,12 +1,19 @@
 import time
+from pathlib import Path
+import sys
 import pandas as pd
 import streamlit as st
+
+DIR = Path(__file__).resolve().parent
+if str(DIR) not in sys.path:
+    sys.path.insert(0, str(DIR))
+
 from classifier import NAMA_FITUR, classify, load_config
 
 st.set_page_config(page_title="Status Akademik (LLM)", page_icon="🤖")
 
 # ---------- 1. Muat konfigurasi hasil evaluasi & siapkan client ----------
-cfg = load_config("config.json")
+cfg = load_config(DIR / "config.json")
 FITUR = list(NAMA_FITUR)
 
 # Mendukung Groq resmi atau tunnel/proxy praktikum

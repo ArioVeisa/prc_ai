@@ -1,18 +1,21 @@
 import json
+from pathlib import Path
 import joblib
 import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title="Prediksi Status Akademik", page_icon="🎓")
 
+DIR = Path(__file__).resolve().parent
+
 # ---------- 1. Muat model & informasi model (sekali saja) ----------
 @st.cache_resource
 def load_model():
-    return joblib.load("model_status_akademik.pkl")
+    return joblib.load(DIR / "model_status_akademik.pkl")
 
 @st.cache_data
 def load_info():
-    with open("model_info.json") as f:
+    with open(DIR / "model_info.json") as f:
         return json.load(f)
 
 model = load_model()
