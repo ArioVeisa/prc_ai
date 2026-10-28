@@ -1,0 +1,87 @@
+{
+  "model": "ai-practicum",
+  "temperature": 0,
+  "max_tokens": 5,
+  "labels": [
+    "Aman",
+    "Waspada",
+    "Berisiko"
+  ],
+  "system_prompt": "Kamu adalah sistem klasifikasi status akademik mahasiswa.\nData: IPK (2,00-4,00), kehadiran kuliah (%), jam belajar mandiri per minggu, tugas terkumpul (%), nilai UTS (0-100), dan keaktifan organisasi.\nLabel:\n- Aman: performa akademik baik secara keseluruhan\n- Waspada: performa sedang, ada beberapa indikator yang perlu diperhatikan\n- Berisiko: performa rendah, berisiko gagal studi\nJawab HANYA dengan satu kata: Aman, Waspada, atau Berisiko.",
+  "few_shot": [
+    {
+      "data": {
+        "ipk": 3.65,
+        "kehadiran": 72,
+        "jam_belajar": 10,
+        "tugas_terkumpul": 84,
+        "nilai_uts": 100,
+        "aktif_organisasi": "Ya"
+      },
+      "label": "Aman"
+    },
+    {
+      "data": {
+        "ipk": 4.0,
+        "kehadiran": 70,
+        "jam_belajar": 14,
+        "tugas_terkumpul": 100,
+        "nilai_uts": 98,
+        "aktif_organisasi": "Tidak"
+      },
+      "label": "Aman"
+    },
+    {
+      "data": {
+        "ipk": 2.0,
+        "kehadiran": 83,
+        "jam_belajar": 9,
+        "tugas_terkumpul": 64,
+        "nilai_uts": 44,
+        "aktif_organisasi": "Ya"
+      },
+      "label": "Berisiko"
+    },
+    {
+      "data": {
+        "ipk": 2.49,
+        "kehadiran": 90,
+        "jam_belajar": 4,
+        "tugas_terkumpul": 65,
+        "nilai_uts": 61,
+        "aktif_organisasi": "Tidak"
+      },
+      "label": "Berisiko"
+    },
+    {
+      "data": {
+        "ipk": 2.77,
+        "kehadiran": 82,
+        "jam_belajar": 5,
+        "tugas_terkumpul": 71,
+        "nilai_uts": 84,
+        "aktif_organisasi": "Ya"
+      },
+      "label": "Waspada"
+    },
+    {
+      "data": {
+        "ipk": 3.03,
+        "kehadiran": 92,
+        "jam_belajar": 6,
+        "tugas_terkumpul": 86,
+        "nilai_uts": 53,
+        "aktif_organisasi": "Ya"
+      },
+      "label": "Waspada"
+    }
+  ],
+  "evaluasi": {
+    "accuracy": 0.61,
+    "f1_macro": 0.6098,
+    "invalid": 0,
+    "n": 200,
+    "dataset": "dataset_status_akademik.csv (bagian test)",
+    "tanggal": "2026-10-25"
+  }
+}
