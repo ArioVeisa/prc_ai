@@ -20,14 +20,15 @@ FITUR = list(NAMA_FITUR)
 api_key = None
 base_url = None
 
-if "GROQ_API_KEY" in st.secrets and not st.secrets["GROQ_API_KEY"].startswith("gsk_isi"):
-    api_key = st.secrets["GROQ_API_KEY"]
-elif "API_KEY" in st.secrets:
-    api_key = st.secrets["API_KEY"]
+groq_key = str(st.secrets.get("GROQ_API_KEY", "")).strip()
+if groq_key and not groq_key.startswith("gsk_isi"):
+    api_key = groq_key
+elif "API_KEY" in st.secrets and str(st.secrets["API_KEY"]).strip():
+    api_key = str(st.secrets["API_KEY"]).strip()
     base_url = st.secrets.get("BASE_URL")
 
-if not api_key or (isinstance(api_key, str) and api_key.startswith("gsk_isi")):
-    st.error("GROQ_API_KEY belum diatur. Isi di .streamlit/secrets.toml (lokal) "
+if not api_key:
+    st.error("API Key belum diatur. Isi GROQ_API_KEY atau API_KEY di .streamlit/secrets.toml (lokal) "
              "atau menu Secrets (Streamlit Community Cloud).")
     st.stop()
 
