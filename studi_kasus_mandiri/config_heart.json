@@ -1,0 +1,117 @@
+{
+  "model": "ai-practicum",
+  "temperature": 0.0,
+  "max_tokens": 10,
+  "labels": [
+    "Normal",
+    "Penyakit Jantung"
+  ],
+  "system_prompt": "Kamu adalah sistem pakar diagnosis risiko penyakit jantung berbasis data klinis.\nIndikator risiko tinggi: ChestPainType ASY (asimptomatik), ExerciseAngina Y, ST_Slope Flat atau Down, Oldpeak tinggi (>1.5), dan usia lanjut.\nIndikator risiko rendah (normal): ST_Slope Up, ExerciseAngina N, ChestPainType ATA/NAP, Oldpeak mendekati 0, dan detak jantung maksimum tinggi.\n\nKlasifikasikan pasien ke dalam salah satu label:\n- Normal: Kondisi jantung terindikasi sehat/normal\n- Penyakit Jantung: Terindikasi kuat menderita penyakit jantung\n\nJawab HANYA dengan satu label: Normal atau Penyakit Jantung.",
+  "few_shot": [
+    {
+      "data": {
+        "Age": 50,
+        "Sex": "F",
+        "ChestPainType": "ATA",
+        "RestingBP": 120,
+        "Cholesterol": 244,
+        "FastingBS": 0,
+        "RestingECG": "Normal",
+        "MaxHR": 162,
+        "ExerciseAngina": "N",
+        "Oldpeak": 1.1,
+        "ST_Slope": "Up"
+      },
+      "label": "Normal"
+    },
+    {
+      "data": {
+        "Age": 40,
+        "Sex": "M",
+        "ChestPainType": "NAP",
+        "RestingBP": 130,
+        "Cholesterol": 281,
+        "FastingBS": 0,
+        "RestingECG": "Normal",
+        "MaxHR": 167,
+        "ExerciseAngina": "N",
+        "Oldpeak": 0.0,
+        "ST_Slope": "Up"
+      },
+      "label": "Normal"
+    },
+    {
+      "data": {
+        "Age": 35,
+        "Sex": "F",
+        "ChestPainType": "TA",
+        "RestingBP": 120,
+        "Cholesterol": 160,
+        "FastingBS": 0,
+        "RestingECG": "ST",
+        "MaxHR": 185,
+        "ExerciseAngina": "N",
+        "Oldpeak": 0.0,
+        "ST_Slope": "Up"
+      },
+      "label": "Normal"
+    },
+    {
+      "data": {
+        "Age": 50,
+        "Sex": "M",
+        "ChestPainType": "ASY",
+        "RestingBP": 140,
+        "Cholesterol": 231,
+        "FastingBS": 0,
+        "RestingECG": "ST",
+        "MaxHR": 140,
+        "ExerciseAngina": "Y",
+        "Oldpeak": 5.0,
+        "ST_Slope": "Flat"
+      },
+      "label": "Penyakit Jantung"
+    },
+    {
+      "data": {
+        "Age": 55,
+        "Sex": "M",
+        "ChestPainType": "ASY",
+        "RestingBP": 140,
+        "Cholesterol": 268,
+        "FastingBS": 0,
+        "RestingECG": "Normal",
+        "MaxHR": 128,
+        "ExerciseAngina": "Y",
+        "Oldpeak": 1.5,
+        "ST_Slope": "Flat"
+      },
+      "label": "Penyakit Jantung"
+    },
+    {
+      "data": {
+        "Age": 52,
+        "Sex": "M",
+        "ChestPainType": "ASY",
+        "RestingBP": 112,
+        "Cholesterol": 342,
+        "FastingBS": 0,
+        "RestingECG": "ST",
+        "MaxHR": 96,
+        "ExerciseAngina": "Y",
+        "Oldpeak": 1.0,
+        "ST_Slope": "Flat"
+      },
+      "label": "Penyakit Jantung"
+    }
+  ],
+  "evaluasi": {
+    "accuracy": 0.8424,
+    "f1_macro": 0.8402,
+    "f1_library_pembanding": 0.8837,
+    "invalid": 0,
+    "n": 184,
+    "dataset": "Heart Failure Prediction Dataset (Kaggle/UCI) test split",
+    "tanggal": "2026-10-28"
+  }
+}

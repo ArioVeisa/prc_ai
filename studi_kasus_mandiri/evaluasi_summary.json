@@ -1,0 +1,39 @@
+{
+  "n_samples": 50,
+  "metrics": {
+    "Random Forest (Library)": {
+      "accuracy": 0.9,
+      "f1_macro": 0.898989898989899,
+      "precision_macro": 0.900974025974026,
+      "recall_macro": 0.8977455716586151,
+      "latency_ms": 3.075737953186035,
+      "confusion_matrix": [
+        [
+          20,
+          3
+        ],
+        [
+          2,
+          25
+        ]
+      ]
+    },
+    "LLM Service (ai-practicum)": {
+      "accuracy": 0.94,
+      "f1_macro": 0.9397832195905259,
+      "precision_macro": 0.9391025641025641,
+      "recall_macro": 0.9412238325281803,
+      "latency_ms": 9132.799234390259,
+      "confusion_matrix": [
+        [
+          22,
+          1
+        ],
+        [
+          2,
+          25
+        ]
+      ]
+    }
+  }
+}

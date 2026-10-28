@@ -1,0 +1,16 @@
+Nama_Pasien,Age,RestingBP,Cholesterol,FastingBS,MaxHR,Oldpeak,Sex,ChestPainType,RestingECG,ExerciseAngina,ST_Slope
+Budi Santoso,55,0,0,0,155,1.5,M,NAP,Normal,N,Flat
+Siti Aminah,62,110,0,0,120,0.5,M,ASY,Normal,Y,Flat
+Rudi Hermawan,47,112,204,0,143,0.1,M,ASY,Normal,N,Up
+Dewi Sartika,58,150,283,1,162,1.0,F,TA,LVH,N,Up
+Agus Pratama,63,150,0,1,154,3.7,M,ASY,ST,N,Up
+Rina Marlina,56,130,0,0,122,1.0,M,ASY,LVH,Y,Flat
+Hendra Wijaya,60,125,0,1,110,0.1,M,ASY,Normal,N,Up
+Sri Mulyani,65,140,252,0,135,0.3,M,TA,Normal,N,Up
+Bambang Soedirgo,62,124,209,0,163,0.0,F,ASY,Normal,N,Up
+Fitri Handayani,59,130,188,0,124,1.0,F,ATA,Normal,N,Flat
+Joko Susilo,57,139,277,1,118,1.9,M,ASY,ST,Y,Flat
+Nurul Hidayah,55,110,277,0,160,0.0,M,NAP,Normal,N,Up
+Ahmad Zarkasyi,44,120,218,0,115,0.0,F,ASY,ST,N,Up
+Ratna Sari,57,130,207,0,96,1.0,M,ASY,ST,Y,Flat
+Eko Yulianto,62,139,170,0,120,3.0,M,ASY,ST,Y,Flat

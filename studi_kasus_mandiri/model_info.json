@@ -1,0 +1,96 @@
+{
+  "nama_model": "Random Forest Classifier (100 Trees, max_depth=6)",
+  "dataset": "Heart Failure Prediction Dataset (Kaggle / UCI)",
+  "fitur_numerik": [
+    "Age",
+    "RestingBP",
+    "Cholesterol",
+    "FastingBS",
+    "MaxHR",
+    "Oldpeak"
+  ],
+  "fitur_kategori": [
+    "Sex",
+    "ChestPainType",
+    "RestingECG",
+    "ExerciseAngina",
+    "ST_Slope"
+  ],
+  "kelas": [
+    "Normal",
+    "Penyakit Jantung"
+  ],
+  "rentang_fitur": {
+    "Age": [
+      29.0,
+      77.0
+    ],
+    "RestingBP": [
+      92.0,
+      200.0
+    ],
+    "Cholesterol": [
+      0.0,
+      603.0
+    ],
+    "FastingBS": [
+      0.0,
+      1.0
+    ],
+    "MaxHR": [
+      60.0,
+      202.0
+    ],
+    "Oldpeak": [
+      -2.6,
+      5.6
+    ]
+  },
+  "kategori_pilihan": {
+    "Sex": [
+      "M",
+      "F"
+    ],
+    "ChestPainType": [
+      "ATA",
+      "NAP",
+      "ASY",
+      "TA"
+    ],
+    "RestingECG": [
+      "Normal",
+      "ST",
+      "LVH"
+    ],
+    "ExerciseAngina": [
+      "N",
+      "Y"
+    ],
+    "ST_Slope": [
+      "Up",
+      "Flat",
+      "Down"
+    ]
+  },
+  "metrik": {
+    "accuracy": 0.8858695652173914,
+    "f1_macro": 0.8837230297011827,
+    "n_train": 734,
+    "n_test": 184,
+    "confusion_matrix": [
+      [
+        69,
+        13
+      ],
+      [
+        8,
+        94
+      ]
+    ]
+  },
+  "versi": {
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "pandas": "3.0.6"
+  }
+}
